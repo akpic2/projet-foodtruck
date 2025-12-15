@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #ff8c00; /* Orange Vif pour l'Accentuation */
     --secondary-color: #ff8c00; /* Utiliser la même couleur pour un look uniforme */
@@ -17,15 +18,13 @@
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-    font-family: var(--font-body);
+    background-color: var(--charcoal);
+    color: var(--white);
     line-height: 1.6;
 }
 
 /* --- Typographie --- */
 h1, h2, h3 {
-    font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -33,46 +32,96 @@ h1, h2, h3 {
 a { text-decoration: none; color: inherit; }
 
 /* --- Header & Navigation --- */
-.header {
-    background: var(--bg-dark); 
-    padding: 15px 20px;
+
+/* ======================= HEADER ======================= */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    padding: 20px 5px;
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid var(--primary-color);
+    left: 0;
+    width: 100%;
+    min-height: 130px;
+    background-color: transparent;
+    z-index: 50;
+    transition: background-color 0.22s ease, box-shadow 0.22s ease;
 }
 
-.header-logo {
-    height: 40px; 
-    width: auto;
-    display: block;
+header.scrolled {
+    background-color: var(--charcoal);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-
-.header nav a { 
-    margin-left: 15px; 
-    font-weight: bold; 
-    font-size: 0.9rem; 
-    color: var(--text-dark); 
+ 
+.acceui_logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.btn-nav {
-    background: var(--primary-color);
-    color: var(--bg-dark) !important; /* Texte de la couleur de fond pour un effet inversé */
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background 0.2s;
+ 
+.acceui_logo img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
-.btn-nav:hover {
-    background: #ffa54f; /* Orange légèrement plus clair au survol */
+ 
+.acceuil_nav1, .acceuil_nav2 {
+    display: flex;
+    flex: 1;
+}
+ 
+.acceuil_nav1 {
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+ 
+.acceuil_nav2 {
+    justify-content: flex-end;
+    padding-right: 80px;
+}
+ 
+.acceuil_nav1 ul, .acceuil_nav2 ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+.acceuil_nav1 ul { gap: 220px; }
+.acceuil_nav2 ul { gap: 100px; }
+ 
+.acceuil_nav1 a, .acceuil_nav2 a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+ 
+.acceuil_nav1 a.active, .acceuil_nav1 a:hover, .acceuil_nav2 a:hover {
+    color: var(--orange-spicy);
+}
+ 
+/* Hover sur les liens de navigation */
+.acceuil_nav1 a,
+.acceuil_nav2 a {
+    transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+}
+ 
+.acceuil_nav1 a:hover,
+.acceuil_nav2 a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 3px 8px rgba(255,107,53,0.4);
 }
 
 /* --- Hero Section (Image de fond) --- */
 .hero {
-    height: 60vh;
-    /* ⚠️ REMPLACER 'chemin/vers/mon-image-hero.jpg' par le chemin de votre image ! */
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('chemin/vers/mon-image-hero.jpg'); 
+    height: 90vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -80,17 +129,22 @@ a { text-decoration: none; color: inherit; }
     justify-content: center;
     text-align: center;
     padding: 20px;
+    background-color: var(--steel-gray);
+}
+
+.photo{
+    width: 100vw;
+    height: 100vh;
 }
 
 .hero-content { 
-    color: var(--text-light); z-index: 2;
-    background-image: ;
+    color: var(--white); z-index: 2;
 }
 .hero h1 { font-size: 3rem; margin-bottom: 10px; line-height: 1.1; }
 .hero p { font-size: 1.2rem; margin-bottom: 20px; color: #ddd; }
 .btn-cta {
-    background: var(--primary-color);
-    color: var(--bg-dark);
+    background: var(--orange-spicy);
+    color: var(--charcoal);
     padding: 12px 30px;
     font-weight: bold;
     border-radius: 50px;
@@ -107,8 +161,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .section-title {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--orange-spicy);
+    border-bottom: 2px solid var(--orange-spicy);
     display: inline-block;
     margin-bottom: 20px;
     font-size: 2rem;
@@ -125,21 +179,21 @@ a { text-decoration: none; color: inherit; }
 }
 
 .card {
-    background: var(--bg-light); 
+    background: var(--charcoal); 
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #444; 
     text-align: center;
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 .card.highlight {
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--orange-spicy);
     background: #33393b; 
 }
 
-.card .price { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); margin: 10px 0; }
-.card .desc { font-size: 0.9rem; color: var(--text-gray); }
+.card .price { font-size: 1.5rem; font-weight: bold; color: var(--orange-spicy); margin: 10px 0; }
+.card .desc { font-size: 0.9rem; color: var(--steel-gray); }
 
 /* --- Liste Burgers --- */
 .menu-list { display: grid; gap: 20px; }
@@ -148,7 +202,7 @@ a { text-decoration: none; color: inherit; }
     background: var(--bg-light);
     padding: 20px;
     border-radius: 8px;
-    border-left: 5px solid var(--primary-color);
+    border-left: 5px solid var(--orange-spicy);
 }
 
 .item-header h3 { font-size: 1.4rem; margin-bottom: 5px; }
@@ -187,7 +241,7 @@ a { text-decoration: none; color: inherit; }
 
 /* --- Footer --- */
 footer {
-    background: #1e2426; /* Un peu plus sombre que le fond général */
+    background: #1e2426;
     color: var(--text-light); 
     text-align: center;
     padding: 40px 20px;
