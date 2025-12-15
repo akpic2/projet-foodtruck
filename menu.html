@@ -1,17 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=*, initial-scale=1.0">
-    <title>MENU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Street Fusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 <body>
-<<<<<<< HEAD
-    <h1>Le Menu</h1>
 
-    <div id="jetebz"></div>
-=======
-    <h1>hey</h1>
->>>>>>> c8d78e3c62e41c64267997b2a689baad949b6b07
+    <header class="header">
+        <div class="logo">
+            <img src="chemin/vers/ton-logo.png" alt="Street Fusion" class="header-logo">
+        </div>
+        <nav>
+            <a href="#burgers">Burgers</a>
+            <a href="#sides">Sides & Desserts</a>
+            <a href="#contact" class="btn-nav">Commander</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cuisine de Rue & Burgers Maison</h1>
+            <p>Produits frais, locaux et cuisinés avec ❤️</p>
+            <a href="#menu-start" class="btn-cta">Voir le Menu</a>
+        </div>
+    </section>
+
+    <div class="container" id="menu-start">
+        
+        <section class="menu-section">
+            <h2 class="section-title">🔥 Nos Formules</h2>
+            <div class="cards-grid">
+                <div class="card highlight">
+                    <h3>La Formule Street Fusion</h3>
+                    <p class="price">14,50€</p>
+                    <p class="desc">1 Burger au choix + Frites Maison + Boisson (33cl)</p>
+                </div>
+                <div class="card">
+                    <h3>La Formule Étudiant</h3>
+                    <p class="price">12,00€</p>
+                    <p class="desc">Burger "Le Classique" + Frites + Boisson <br><em>(Sur présentation de la carte)</em></p>
+                </div>
+                <div class="card">
+                    <h3>P'tit Gourmand</h3>
+                    <p class="price">9,00€</p>
+                    <p class="desc">Mini Burger + Frites + Jus + Surprise</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="menu-section" id="burgers">
+            <h2 class="section-title">🍔 Les Burgers</h2>
+            <p class="subtitle">Solo : 10,50€ | Option sans gluten +1€</p>
+            
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="item-header">
+                        <h3>Le Classique</h3>
+                    </div>
+                    <p class="ingredients">Steak haché VBF, Cheddar 9 mois, Oignons confits, Laitue, Sauce secret.</p>
+                </article>
+
+                <article class="menu-item">
+                    <div class="item-header">
+                        <h3>Le Cocorico <span class="badge">Poulet</span></h3>
+                    </div>
+                    <p class="ingredients">Filet pané cornflakes, Tomates séchées, Parmesan, Roquette, Sauce Miel-Moutarde.</p>
+                </article>
+
+                <article class="menu-item">
+                    <div class="item-header">
+                        <h3>Le Montagnard <span class="badge hot">Best-seller</span></h3>
+                    </div>
+                    <p class="ingredients">Steak haché, Raclette de Savoie, Poitrine fumée, Oignons frits, Sauce BBQ.</p>
+                </article>
+
+                <article class="menu-item">
+                    <div class="item-header">
+                        <h3>Le Végé-Patch <span class="badge vege">Végé 🌱</span></h3>
+                    </div>
+                    <p class="ingredients">Galette légumes & quinoa, Chèvre frais, Pousses d'épinards, Sauce yaourt menthe.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <div class="columns-grid" id="sides">
+            <section class="menu-section">
+                <h2 class="section-title">🍟 Sides</h2>
+                <ul class="simple-list">
+                    <li>
+                        <span>Frites Maison</span>
+                        <span class="price-tag">3,50€</span>
+                    </li>
+                    <li>
+                        <span>Frites Cheddar & Bacon</span>
+                        <span class="price-tag">5,00€</span>
+                    </li>
+                    <li>
+                        <span>Coleslaw Frais</span>
+                        <span class="price-tag">3,00€</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="menu-section">
+                <h2 class="section-title">🍪 Desserts</h2>
+                <ul class="simple-list">
+                    <li>
+                        <span>Le Brookie</span>
+                        <span class="price-tag">3,50€</span>
+                    </li>
+                    <li>
+                        <span>Muffin Myrtilles</span>
+                        <span class="price-tag">3,00€</span>
+                    </li>
+                    <li>
+                        <span>Cookie Chocolat</span>
+                        <span class="price-tag">2,50€</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>📍 Où nous trouver ?</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Lun-Mar : Zone Nord (11h-14h)</p>
+            <p><i class="fas fa-map-marker-alt"></i> Jeu-Ven : Place Mairie (18h-22h)</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="copyright">© 2024 Street Fusion/p>
+        </div>
+    </footer>
+
 </body>
 </html>
