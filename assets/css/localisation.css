@@ -95,29 +95,29 @@ header.scrolled {
 
 main {
   background-image: url("../img/map-1301054_1920.jpg");
-   background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'espace */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-position: center; /* Centre l'image */
-    height: 100vh; /* Ajuste la hauteur à 100% de la hauteur de la fenêtre */
-    width: 100%; /* Largeur à 100% */
-    position: relative; /* Position relative pour le texte superposé */
-    filter: none; /* Enlève tout filtre de flou */
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'espace */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image */
+  height: 100vh; /* Ajuste la hauteur à 100% de la hauteur de la fenêtre */
+  width: 100%; /* Largeur à 100% */
+  position: relative; /* Position relative pour le texte superposé */
+  filter: none; /* Enlève tout filtre de flou */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.localisation_texte p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2em;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour améliorer la lisibilité */
-    }
+.localisation_texte p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour améliorer la lisibilité */
+}
 
 .localisation_texte {
   text-align: center;
@@ -132,6 +132,7 @@ main {
 .tableau {
   border: 2px solid black;
   margin: 20px;
+  background-color: white;
 }
 
 .tableau thead {
@@ -145,11 +146,10 @@ main {
   padding: 10px;
 }
 
-
 .tableau,
 .contenue {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   color: #333;
@@ -203,7 +203,7 @@ h2 {
 }
 
 .warning-box {
-  background-color: #fff3cd;
+  background-color: #ffffff;
   border-left: 4px solid #ffc107;
   padding: 15px;
   margin-bottom: 20px;
@@ -254,14 +254,14 @@ table tbody tr.active-row {
   text-align: center;
   margin: 20px 0;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 8px;
 }
 
 .map-placeholder {
   width: 100%;
   height: 400px;
-  background-color: #e0e0e0;
+  background-color: #ffffff;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -274,5 +274,113 @@ table tbody tr.active-row {
     flex-direction: column;
   }
 }
+.contenue {
+  padding: 40px;
+}
 
+.contenue p,
+h3 {
+  padding: 12px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 34px;
+}
+.contact-section {
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.contact-box, .social-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.contact-box {
+    background-color: #FF6B35;
+    
+}
+
+.social-box {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+}
+
+.contact-box h3, .social-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.contact-box p, .social-box p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.phone {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.instagram-link {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.facebook-link {
+    background-color: #4267B2;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+}
+
+.contact-box, .social-box {
+    width: 450px;      /* Largeur fixe */
+    height: 300px;    /* Hauteur fixe */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .contact-box h3{
+    font-size: 35px;
+ }
+  .contact-box p{
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;;
+ }
+
+  .social-box h3{
+    font-size: 35px;
+ }
+  .social-box p{
+    font-size: 25px;
+   font-family:  "Bebas Neue", sans-serif;
+ }

@@ -11,13 +11,17 @@
 }
 
 /* --- Reset & Base --- */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body{
+    height: 100%;
+    font-family: 'Bangers', cursive;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
     font-family: var(--font-body);
     background-color: var(--bg-dark);
     color: var(--text-white);
@@ -230,7 +234,10 @@ input[type="date"], select {
     color: var(--text-gray);
     font-size: 0.9rem;
 }
-.footer p { margin: 5px 0; }
+.footer_top p { 
+    margin: 5px 0;
+    font-family: "Bebas Neue", sans-serif;
+}
 
 /* --- Responsive mobile --- */
 @media (max-width: 600px) {
