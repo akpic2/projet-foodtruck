@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%;
+    font-size: 24px;
     font-family: 'Bangers', cursive;
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
