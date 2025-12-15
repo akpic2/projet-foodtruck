@@ -32,3 +32,11 @@ html,body{height:100%;margin:0;font-family: 'Bangers', cursive, Arial, Helvetica
 @media(max-width:700px){
 	.container{width:95%}
 }
+
+html, body {
+    height: 100%;
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
