@@ -33,20 +33,6 @@ html,body{height:100%;margin:0;font-family: 'Bangers', cursive, Arial, Helvetica
 	.container{width:95%}
 }
 
-/* ======================= RESET ET BASE ======================= */
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    font-size: 24px;
-    font-family: 'Bangers', cursive;
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-}
 
 /* ======================= HEADER ======================= */
 header {

@@ -1,5 +1,8 @@
-/* --- Style Spécifique pour la page de confirmation --- */
+*{
+    font-size: 16px;
+}
 
+/* --- Style Spécifique pour la page de confirmation --- */
 .confirmation-box {
     text-align: center;
     padding: 80px 40px;
