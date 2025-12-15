@@ -120,38 +120,49 @@ header.scrolled {
 }
 
 /* --- Hero Section (Image de fond) --- */
+/* Styles pour la section Hero */
 .hero {
-    height: 90vh;
-    background-size: cover;
-    background-position: center;
+    /* 1. Définir l'image de fond et son chemin */
+    background-image: url('../img/burger-menu.png');
+    background-attachment: fixed;
+    
+    /* 2. Assurer que l'image couvre toute la zone sans répétition */
+    background-size: cover; /* Important : Garantit que l'image couvre toute la section */
+    background-repeat: no-repeat;
+    
+    /* 3. Centrer l'image */
+    background-position: center center;
+
+    /* 4. Donner une hauteur minimale à la section pour que l'image soit visible */
+    min-height: 700px; /* Ajustez cette valeur selon la hauteur désirée (ex: 50vh ou 600px) */
+
+    /* Alignement du contenu (le texte) */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
     text-align: center;
-    padding: 20px;
-    background-color: var(--steel-gray);
+    padding: 20px; /* Pour ajouter un peu d'espace autour */
 }
 
-.photo{
-    width: 100vw;
-    height: 100vh;
+/* Styles pour le contenu texte (facultatif mais recommandé pour la lisibilité) */
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Ajout d'un fond semi-transparent noir */
+    padding: 30px;
+    border-radius: 10px;
+    color: white; /* Pour s'assurer que le texte est lisible sur l'image sombre */
 }
 
-.hero-content { 
-    color: var(--white); z-index: 2;
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; line-height: 1.1; }
-.hero p { font-size: 1.2rem; margin-bottom: 20px; color: #ddd; }
-.btn-cta {
-    background: var(--orange-spicy);
-    color: var(--charcoal);
-    padding: 12px 30px;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: transform 0.2s;
-    display: inline-block;
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
-.btn-cta:hover { transform: scale(1.05); }
+
+
 
 /* --- Container & Sections --- */
 .container {
@@ -258,4 +269,8 @@ footer {
     .hero h1 { font-size: 2.2rem; }
     .header { flex-direction: column; }
     .header nav { margin-top: 10px; }
+}
+
+.item-header h3{
+    color: var(--text-dark);
 }
