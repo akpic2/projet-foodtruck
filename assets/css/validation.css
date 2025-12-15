@@ -1,0 +1,65 @@
+*{
+    font-size: 16px;
+}
+
+/* --- Style Spécifique pour la page de confirmation --- */
+.confirmation-box {
+    text-align: center;
+    padding: 80px 40px;
+    margin-top: 50px;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+.check-icon {
+    font-size: 5rem;
+    color: #4CAF50; /* Vert Succès */
+    margin-bottom: 20px;
+}
+
+.headline-confirmation {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.message-content {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+.next-steps {
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.next-steps h3 {
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    color: var(--text-gray);
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.next-steps li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.back-home {
+    margin-top: 20px;
+    padding: 15px 40px;
+}
