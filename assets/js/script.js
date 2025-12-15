@@ -26,3 +26,46 @@ window.addEventListener('scroll', () => {
         }, 500); // 500ms pause
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  /* ===============================
+     ANIMATION FORMULES (CARDS)
+  =============================== */
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    card.style.transition = "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease";
+
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-8px) scale(1.03)";
+      card.style.boxShadow = "0 15px 30px rgba(255, 140, 0, 0.35)";
+      card.style.borderColor = "var(--primary-color)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0) scale(1)";
+      card.style.boxShadow = "none";
+      card.style.borderColor = "#444";
+    });
+  });
+
+  /* ===============================
+     ANIMATION BURGERS (MENU ITEM)
+  =============================== */
+  const burgers = document.querySelectorAll(".menu-item");
+
+  burgers.forEach(item => {
+    item.style.transition = "transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease";
+
+    item.addEventListener("mouseenter", () => {
+      item.style.transform = "translateX(8px)";
+      item.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.4)";
+      item.style.backgroundColor = "#666";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      item.style.transform = "translateX(0)";
+      item.style.boxShadow = "none";
+      item.style.backgroundColor = "#555";
+    });
+  });
+});

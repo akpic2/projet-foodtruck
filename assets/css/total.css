@@ -33,10 +33,248 @@ html,body{height:100%;margin:0;font-family: 'Bangers', cursive, Arial, Helvetica
 	.container{width:95%}
 }
 
+/* ======================= RESET ET BASE ======================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     font-size: 24px;
     font-family: 'Bangers', cursive;
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+}
+
+/* ======================= HEADER ======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 130px;
+    background-color: transparent;
+    z-index: 50;
+    transition: background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+header.scrolled {
+    background-color: var(--charcoal);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.acceui_logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acceui_logo img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.acceuil_nav1, .acceuil_nav2 {
+    display: flex;
+    flex: 1;
+}
+
+.acceuil_nav1 {
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+
+.acceuil_nav2 {
+    justify-content: flex-end;
+    padding-right: 80px;
+}
+
+.acceuil_nav1 ul, .acceuil_nav2 ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.acceuil_nav1 ul { gap: 220px; }
+.acceuil_nav2 ul { gap: 100px; }
+
+.acceuil_nav1 a, .acceuil_nav2 a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.acceuil_nav1 a.active, .acceuil_nav1 a:hover, .acceuil_nav2 a:hover {
+    color: var(--orange-spicy);
+}
+
+/* ======================= FOOTER ======================= */
+.site_footer {
+    background-color: var(--charcoal);
+    color: var(--white);
+    padding: 40px 60px; /* Un peu plus d'espace sur les côtés */
+    font-family: "Bebas Neue", sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.site_footer h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: var(--orange-spicy); /* Petit ajout de couleur pour le style */
+}
+
+.site_footer p,
+.site_footer a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin: 5px 0;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+/* --- PARTIE HAUTE (3 colonnes) --- */
+.footer_top {
+    display: flex;
+    justify-content: space-between; /* Écarte les éléments au maximum */
+    align-items: flex-start; /* Aligne tout en haut */
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+    gap: 40px;
+    width: 100%;
+}
+
+/* On s'assure que chaque colonne prend de la place mais pas trop */
+.footer_contact, 
+.footer_social, 
+.footer_hours {
+    flex: 1; /* Chaque colonne prend une largeur égale */
+    min-width: 250px; /* Sécurité pour mobile */
+}
+
+/* Centrer le contenu de la colonne du milieu (Social) et de droite (Horaires) si tu veux */
+.footer_social {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_hours {
+    text-align: center; /* Aligner les horaires à droite pour équilibrer */
+}
+
+/* Icônes réseaux sociaux */
+.footer_social .social_icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* --- SEPARATEUR --- */
+.footer_separator {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent); /* Joli dégradé */
+    margin: 40px 0;
+}
+
+/* --- PARTIE BASSE (2 éléments) --- */
+.footer_bottom {
+    display: flex;
+    justify-content: space-between; /* Copyright à gauche, Légal à droite */
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer_copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer_legal {
+    text-align: right;
+}
+
+.footer_legal p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer_legal p:hover {
+    color: var(--orange-spicy);
+    opacity: 1;
+}
+
+/* ======================= FOOTER SOCIAL HOVER ======================= */
+
+.svg_placeholder {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.svg_placeholder:hover {
+    transform: scale(1.12);
+    background: rgba(255,255,255,0.18);
+}
+
+/* Tooltip */
+.social_tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg);
+    background: #000;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.svg_placeholder:hover .social_tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-6px) rotate(-6deg);
+}
+
+/* Icônes */
+.svg_placeholder svg {
+    width: 22px;
+    height: 22px;
+    color: var(--white);
 }
