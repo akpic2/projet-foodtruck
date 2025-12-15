@@ -132,8 +132,27 @@ header.scrolled {
   transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
 }
 
-.acceuil_nav1 a:hover,
-.acceuil_nav2 a:hover {
+.acceuil_cta{
+  background-color: var(--primary-color);
+  width: 200px;
+  position: relative;
+  left: 250px;  
+  top: 200px;
+  border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.acceuil_cta:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(255,107,53,0.5);
+    filter: brightness(1.1);
+}
+
+.acceuil_cta:hover a {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+.acceuil_nav1 a:hover {
   transform: translateY(-2px);
   text-shadow: 0 3px 8px rgba(255, 107, 53, 0.4);
 }
@@ -201,6 +220,7 @@ header.scrolled {
   color: var(--text-gray);
   margin-bottom: 30px;
   font-style: italic;
+  font-size: 45px;
 }
 .divider {
   border: 0;
