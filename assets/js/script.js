@@ -28,7 +28,7 @@ window.addEventListener('scroll', () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   /* ===============================
-     ANIMATION FORMULES (CARDS)
+    ANIMATION FORMULES (CARDS)
   =============================== */
   const cards = document.querySelectorAll(".card");
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===============================
-     ANIMATION BURGERS (MENU ITEM)
+    ANIMATION BURGERS (MENU ITEM)
   =============================== */
   const burgers = document.querySelectorAll(".menu-item");
 
@@ -68,4 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.backgroundColor = "#555";
     });
   });
+});
+
+const foodtruckImg = document.querySelector('.acceuil_foodtruck');
+const histoireSection = document.querySelector('.acceuil_histoire_img');
+
+window.addEventListener('scroll', () => {
+    const sectionRect = histoireSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (sectionRect.top < windowHeight * 1.05 && sectionRect.bottom > 0) {
+        foodtruckImg.classList.add('visible');
+    } else {
+        foodtruckImg.classList.remove('visible');
+    }
 });
