@@ -264,3 +264,13 @@ header.scrolled {
     height: 22px;
     color: var(--white);
 }
+
+.footer_hours{
+    text-align: right;
+ margin-right: 100px;
+}
+
+.footer_contact{
+    text-align: left;
+    margin-left: 100px;
+}
