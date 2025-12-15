@@ -26,13 +26,14 @@ body {
   background-color: var(--charcoal);
   color: var(--white);
   line-height: 1.6;
-  html, body {
+  html,
+  body {
     height: 100%;
     font-size: 24px;
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
-}
+  }
 }
 
 /* --- Typographie --- */
@@ -172,14 +173,10 @@ header.scrolled {
 
 /* Styles pour le contenu texte (facultatif mais recommandé pour la lisibilité) */
 .hero-content {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Ajout d'un fond semi-transparent noir */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Ajout d'un fond semi-transparent noir */
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 30px;
   color: white; /* Pour s'assurer que le texte est lisible sur l'image sombre */
 }
 
@@ -234,11 +231,6 @@ header.scrolled {
   border: 1px solid #444;
   text-align: center;
   color: var(--white);
-}
-
-.card.highlight {
-  border: 2px solid var(--orange-spicy);
-  background: #33393b;
 }
 
 .card .price {

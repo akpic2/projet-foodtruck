@@ -82,6 +82,13 @@ section {
     z-index: 1;
 }
 
+.texte{
+     background-color: rgba(0, 0, 0, 0.5);
+     height: 140px;
+     width: 80%;
+     border-radius: 30px;
+}
+
 .acceuil_histoire_img {
     display: flex;
     justify-content: center;
