@@ -80,6 +80,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
 }
 
 .acceui_logo img {

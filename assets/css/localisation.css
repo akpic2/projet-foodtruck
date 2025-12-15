@@ -34,6 +34,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 150px;
 }
 
 .acceui_logo img {
@@ -79,6 +80,42 @@ header.scrolled {
 .acceuil_nav1 a.active, .acceuil_nav1 a:hover, .acceuil_nav2 a:hover {
     color: var(--orange-spicy);
 }
+
+/* ---------- Main ----------- */
+
+main{
+    background-image: url("../img/map-1301054_1920.jpg");
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.localisation_texte{
+    text-align: center;
+    padding-top: 550px;
+    left: 25%;
+    font-size: 70px;
+    color: var(--white);
+    letter-spacing: 4px;
+}
+
+/* ---------- Section Tableau ----------- */
+.tableau {
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.tableau thead {
+    background-color: var(--orange-spicy);
+    color: white;
+    letter-spacing: 4px;
+    margin: 20px;
+}
+
+.tableau td {
+    padding: 10px;
+}
+
 
 /* ======================= FOOTER ======================= */
 .site_footer {
