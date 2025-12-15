@@ -1,224 +1,386 @@
 /* ======================= RESET ET BASE ======================= */
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /* ======================= HEADER ======================= */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 130px;
-    background-color: transparent;
-    z-index: 50;
-    transition: background-color 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 130px;
+  background-color: transparent;
+  z-index: 50;
+  transition: background-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 header.scrolled {
-    background-color: var(--charcoal);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background-color: var(--charcoal);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .acceui_logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
 }
 
 .acceui_logo img {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.acceuil_nav1, .acceuil_nav2 {
-    display: flex;
-    flex: 1;
+.acceuil_nav1,
+.acceuil_nav2 {
+  display: flex;
+  flex: 1;
 }
 
 .acceuil_nav1 {
-    justify-content: flex-start;
-    padding-left: 80px;
+  justify-content: flex-start;
+  padding-left: 80px;
 }
 
 .acceuil_nav2 {
-    justify-content: flex-end;
-    padding-right: 80px;
+  justify-content: flex-end;
+  padding-right: 80px;
 }
 
-.acceuil_nav1 ul, .acceuil_nav2 ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.acceuil_nav1 ul,
+.acceuil_nav2 ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.acceuil_nav1 ul { gap: 220px; }
-.acceuil_nav2 ul { gap: 100px; }
-
-.acceuil_nav1 a, .acceuil_nav2 a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 3px;
+.acceuil_nav1 ul {
+  gap: 220px;
+}
+.acceuil_nav2 ul {
+  gap: 100px;
 }
 
-.acceuil_nav1 a.active, .acceuil_nav1 a:hover, .acceuil_nav2 a:hover {
-    color: var(--orange-spicy);
+.acceuil_nav1 a,
+.acceuil_nav2 a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.acceuil_nav1 a.active,
+.acceuil_nav1 a:hover,
+.acceuil_nav2 a:hover {
+  color: var(--orange-spicy);
 }
 
 /* ---------- Main ----------- */
 
-main{
-    background-image: url("../img/map-1301054_1920.jpg");
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+main {
+  background-image: url("../img/map-1301054_1920.jpg");
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'espace */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image */
+  height: 100vh; /* Ajuste la hauteur à 100% de la hauteur de la fenêtre */
+  width: 100%; /* Largeur à 100% */
+  position: relative; /* Position relative pour le texte superposé */
+  filter: none; /* Enlève tout filtre de flou */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.localisation_texte{
-    text-align: center;
-    padding-top: 550px;
-    left: 25%;
-    font-size: 70px;
-    color: var(--white);
-    letter-spacing: 4px;
+.localisation_texte p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour améliorer la lisibilité */
+}
+
+.localisation_texte {
+  text-align: center;
+  padding-top: 550px;
+  left: 25%;
+  font-size: 70px;
+  color: var(--white);
+  letter-spacing: 4px;
 }
 
 /* ---------- Section Tableau ----------- */
 .tableau {
-    border: 2px solid black;
-    margin: 20px;
+  border: 2px solid black;
+  margin: 20px;
+  background-color: white;
 }
 
 .tableau thead {
-    background-color: var(--orange-spicy);
-    color: white;
-    letter-spacing: 4px;
-    margin: 20px;
+  background-color: var(--orange-spicy);
+  color: white;
+  letter-spacing: 4px;
+  margin: 20px;
 }
 
 .tableau td {
-    padding: 10px;
+  padding: 10px;
 }
 
-
-/* ======================= FOOTER ======================= */
-.site_footer {
-    background-color: var(--charcoal);
-    color: var(--white);
-    padding: 40px 60px; /* Un peu plus d'espace sur les côtés */
-    font-family: "Bebas Neue", sans-serif;
-    position: relative;
-    z-index: 10;
+.tableau,
+.contenue {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 18px; /* Taille de police augmentée pour le body */
+  text-align: center; /* Texte centré */
 }
 
-.site_footer h3 {
-    font-family: 'Bangers', cursive;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    color: var(--orange-spicy); /* Petit ajout de couleur pour le style */
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.site_footer p,
-.site_footer a {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.1rem;
-    color: var(--white);
-    margin: 5px 0;
-    text-decoration: none;
-    line-height: 1.4;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
-/* --- PARTIE HAUTE (3 colonnes) --- */
-.footer_top {
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Texte centré */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #666;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em; /* Taille de police augmentée */
+  margin-bottom: 30px;
+}
+
+.warning-box {
+  background-color: #ffffff;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: center; /* Texte centré */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px auto; /* Tableau centré */
+  font-size: 1em; /* Taille de police augmentée */
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+  background-color: #e91e63;
+  color: #ffffff;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: center; /* Texte centré */
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #e91e63;
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.map-container {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
+.contenue {
+  padding: 40px;
+}
+
+.contenue p,
+h3 {
+  padding: 12px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 34px;
+}
+.contact-section {
+    background-color: ;
     display: flex;
-    justify-content: space-between; /* Écarte les éléments au maximum */
-    align-items: flex-start; /* Aligne tout en haut */
-    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
-    gap: 40px;
-    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* On s'assure que chaque colonne prend de la place mais pas trop */
-.footer_contact, 
-.footer_social, 
-.footer_hours {
-    flex: 1; /* Chaque colonne prend une largeur égale */
-    min-width: 250px; /* Sécurité pour mobile */
-}
-
-/* Centrer le contenu de la colonne du milieu (Social) et de droite (Horaires) si tu veux */
-.footer_social {
+.contact-box, .social-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
     text-align: center;
+}
+
+.contact-box {
+    background-color: #FF6B35;
+    
+}
+
+.social-box {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+}
+
+.contact-box h3, .social-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.contact-box p, .social-box p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.phone {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.instagram-link {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.facebook-link {
+    background-color: #4267B2;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+}
+
+.contact-box, .social-box {
+    width: 450px;      /* Largeur fixe */
+    height: 300px;    /* Hauteur fixe */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.footer_hours {
-    text-align: center; /* Aligner les horaires à droite pour équilibrer */
-}
-
-/* Icônes réseaux sociaux */
-.footer_social .social_icons {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
     justify-content: center;
-}
-
-/* --- SEPARATEUR --- */
-.footer_separator {
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent); /* Joli dégradé */
-    margin: 40px 0;
-}
-
-/* --- PARTIE BASSE (2 éléments) --- */
-.footer_bottom {
-    display: flex;
-    justify-content: space-between; /* Copyright à gauche, Légal à droite */
     align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
 }
+ .contact-box h3{
+    font-size: 35px;
+ }
+  .contact-box p{
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;;
+ }
 
-.footer_copyright p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.footer_legal {
-    text-align: right;
-}
-
-.footer_legal p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-left: 15px;
-    transition: color 0.3s ease;
-}
-
-.footer_legal p:hover {
-    color: var(--orange-spicy);
-    opacity: 1;
-}
+  .social-box h3{
+    font-size: 35px;
+ }
+  .social-box p{
+    font-size: 25px;
+   font-family:  "Bebas Neue", sans-serif;
+ }
