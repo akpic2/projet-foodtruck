@@ -6,10 +6,119 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/privatisation.css">
-    <script src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/total.css">
+    <script src="./assets/js/script.js" defer></script>
 
 </head>
 <body>
-    
+
+    <header class="header">
+        <div class="logo">Street Fusion 🚚</div>
+        </header>
+
+    <main class="container">
+        <section class="hero-event">
+            <h1 class="headline">Street Fusion pour vos Événements</h1>
+            <p class="subheadline">Apportez une cuisine de rue gourmande et conviviale à votre fête d'entreprise, mariage, ou rassemblement privé !</p>
+            <a href="#formulaire" class="btn-cta">Demander un Devis Personnalisé</a>
+        </section>
+
+        <section class="section-info">
+            <h2 class="section-title"><i class="fas fa-handshake"></i> Nos Formules de Réservation</h2>
+            <div class="formula-grid">
+                
+                <div class="formula-card">
+                    <h3>Intervention sur Site</h3>
+                    <p>Nous nous déplaçons directement sur votre lieu d'événement. Nous avons besoin d'un espace plat de 6x4m et d'un accès à une prise électrique standard.</p>
+                </div>
+                
+                <div class="formula-card">
+                    <h3>Minimum Garanti</h3>
+                    <p class="highlight-text">50 personnes minimum</p>
+                    <p>Ce seuil garantit la rentabilité de notre déplacement.<br> Si évènement plus petit contactez-nous pour en discuter et trouver une solution avantageuse pour tout le monde</p>
+                </div>
+                
+                <div class="formula-card">
+                    <h3>Menus Personnalisés</h3>
+                    <p>Choix illimité dans notre carte, ou conception d'un menu thématique (Végétarien, Asie, Classique...) en accord avec votre événement et votre budget.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-tarifs">
+            <h2 class="section-title"><i class="fas fa-money-bill-wave"></i> Modalités & Tarification</h2>
+            <p class="tarifs-intro">Nos tarifs sont calculés sur la base de deux éléments principaux : le forfait de mobilisation du Food Truck (incluant le déplacement, le temps de service, et l'équipe) et le coût du menu par personne.</p>
+            
+            <div class="price-details">
+                <div class="price-item">
+                    <p class="price-label">Forfait Mobilisation & Service</p>
+                    <p class="price-value">Dès 350€</p>
+                </div>
+                <div class="price-item">
+                    <p class="price-label">Prix par Personne (Menus)</p>
+                    <p class="price-value">Dès 12€</p>
+                </div>
+            </div>
+            
+            <blockquote class="note-quote">
+                Un acompte de 30% est demandé à la confirmation de la réservation. Le solde est dû 48h avant l'événement.
+            </blockquote>
+        </section>
+
+        <section class="section-form" id="formulaire">
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Demande de Réservation</h2>
+            <form action="./validation.html" method="POST" class="contact-form">
+                
+                <div class="form-group">
+                    <label for="nom">Nom & Prénom / Nom de l'Entreprise *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adresse Électronique *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group half-width">
+                    <label for="type_event">Type d'Événement *</label>
+                    <select id="type_event" name="type_event" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="entreprise">Événement d'entreprise (Séminaire, Team Building)</option>
+                        <option value="prive_mariage">Mariage / Anniversaire</option>
+                        <option value="prive_autre">Fête privée (autre)</option>
+                        <option value="public">Événement public (Festival, Marché)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group half-width">
+                    <label for="date_souhaitee">Date Souhaitée *</label>
+                    <input type="date" id="date_souhaitee" name="date_souhaitee" required>
+                </div>
+                
+                <div class="form-group half-width">
+                    <label for="nombre_estime">Nombre Estimé de Personnes *</label>
+                    <input type="number" id="nombre_estime" name="nombre_estime" min="50" placeholder="Minimum 50" required>
+                </div>
+                
+                <div class="form-group half-width">
+                    <label for="budget">Budget estimé par personne (optionnel)</label>
+                    <input type="text" id="budget" name="budget" placeholder="Ex: 15€ par personne">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="attentes">Attentes et Précisions Particulières (Menu souhaité, lieu, contraintes...)</label>
+                    <textarea id="attentes" name="attentes" rows="5"></textarea>
+                </div>
+                
+                <a href="./validation.html" class="btn-submit">Envoyer ma Demande de Devis</a>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Street Fusion. Tous droits réservés.</p>
+        <p>Service Événementiel : contact@streetfusion.fr</p>
+    </footer>
+
 </body>
 </html>
