@@ -20,6 +20,13 @@ body {
   background-color: var(--charcoal);
   color: var(--white);
   line-height: 1.6;
+  html, body {
+    height: 100%;
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
 }
 
 /* --- Typographie --- */
