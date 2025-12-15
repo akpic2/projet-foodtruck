@@ -20,9 +20,8 @@ html{
     height: 100%;
     font-size: 24px;
     font-family: 'Bangers', cursive;
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
 }
+
 body {
   background-color: var(--charcoal);
   color: var(--white);
@@ -32,8 +31,6 @@ body {
     height: 100%;
     font-size: 24px;
     font-family: "Bangers", cursive;
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
   }
 }
 
