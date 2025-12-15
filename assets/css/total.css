@@ -166,6 +166,14 @@ header.scrolled {
     text-align: center; /* Aligner les horaires à droite pour équilibrer */
 }
 
+.footer_hours h3 {
+    margin-left: 130px;
+}
+
+.footer_hours p {
+    margin-left: 130px;
+}
+
 /* Icônes réseaux sociaux */
 .footer_social .social_icons {
     display: flex;
