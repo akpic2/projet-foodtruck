@@ -1,157 +1,279 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu - Street Fusion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/total.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    <link rel="stylesheet" href="./assets/css/total.css" />
     <script src="./assets/js/script.js" defer></script>
-</head>
-<body>
-
-<header>
-<nav class="acceuil_nav1">
-<ul>
-<li><a href="acceuil.html">Accueil</a></li>
-<li><a href="menu.html">Menu</a></li>
-</ul>
-</nav>
-<div class="acceui_logo">
-<img src="./assets/img/Logo Street Fusion blanc.png" alt="logo Street Fusion">
-</div>
-<nav class="acceuil_nav2">
-<ul>
-<li><a href="localisation.html">Localisation</a></li>
-<li><a href="privatisation.html">Privatisation</a></li>
-</ul>
-</nav>
-</header>
+  </head>
+  <body>
+    <header>
+      <nav class="acceuil_nav1">
+        <ul>
+          <li><a href="acceuil.html">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </nav>
+      <div class="acceui_logo">
+        <img
+          src="./assets/img/Logo Street Fusion blanc.png"
+          alt="logo Street Fusion"
+        />
+      </div>
+      <nav class="acceuil_nav2">
+        <ul>
+          <li><a href="localisation.html">Localisation</a></li>
+          <li><a href="privatisation.html">Privatisation</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <img class="photo" src="./assets/img/burger-menu.png" alt="">
-            <h1>Cuisine de Rue & Burgers Maison</h1>
-            <p>Produits frais, locaux et cuisinés avec ❤️</p>
-            <a href="#menu-start" class="btn-cta">Voir le Menu</a>
-        </div>
+      <div class="hero-content">
+        <h1>Cuisine de Rue & Burgers Maison</h1>
+        <p>Produits frais, locaux et cuisinés avec ❤️</p>
+        <a href="#menu-start" class="btn-cta">Voir le Menu</a>
+      </div>
     </section>
 
     <div class="container" id="menu-start">
-        
+      <section class="menu-section">
+        <h2 class="section-title">🔥 Nos Formules</h2>
+        <div class="cards-grid">
+          <div class="card highlight">
+            <h3>La Formule Street Fusion</h3>
+            <p class="price">14,50€</p>
+            <p class="desc">
+              1 Burger au choix + Frites Maison + Boisson (33cl)
+            </p>
+          </div>
+          <div class="card">
+            <h3>La Formule Étudiant</h3>
+            <p class="price">12,00€</p>
+            <p class="desc">
+              Burger "Le Classique" + Frites + Boisson <br /><em
+                >(Sur présentation de la carte)</em
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h3>P'tit Gourmand</h3>
+            <p class="price">9,00€</p>
+            <p class="desc">Mini Burger + Frites + Jus + Surprise</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="menu-section" id="burgers">
+        <h2 class="section-title">🍔 Les Burgers</h2>
+        <p class="subtitle">Solo : 10,50€ | Option sans gluten +1€</p>
+
+        <div class="menu-list">
+          <article class="menu-item">
+            <div class="item-header">
+              <h3>Le Classique</h3>
+            </div>
+            <p class="ingredients">
+              Steak haché VBF, Cheddar 9 mois, Oignons confits, Laitue, Sauce
+              secret.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="item-header">
+              <h3>Le Cocorico <span class="badge">Poulet</span></h3>
+            </div>
+            <p class="ingredients">
+              Filet pané cornflakes, Tomates séchées, Parmesan, Roquette, Sauce
+              Miel-Moutarde.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="item-header">
+              <h3>Le Montagnard <span class="badge hot">Best-seller</span></h3>
+            </div>
+            <p class="ingredients">
+              Steak haché, Raclette de Savoie, Poitrine fumée, Oignons frits,
+              Sauce BBQ.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="item-header">
+              <h3>Le Végé-Patch <span class="badge vege">Végé 🌱</span></h3>
+            </div>
+            <p class="ingredients">
+              Galette légumes & quinoa, Chèvre frais, Pousses d'épinards, Sauce
+              yaourt menthe.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <div class="columns-grid" id="sides">
         <section class="menu-section">
-            <h2 class="section-title">🔥 Nos Formules</h2>
-            <div class="cards-grid">
-                <div class="card highlight">
-                    <h3>La Formule Street Fusion</h3>
-                    <p class="price">14,50€</p>
-                    <p class="desc">1 Burger au choix + Frites Maison + Boisson (33cl)</p>
-                </div>
-                <div class="card">
-                    <h3>La Formule Étudiant</h3>
-                    <p class="price">12,00€</p>
-                    <p class="desc">Burger "Le Classique" + Frites + Boisson <br><em>(Sur présentation de la carte)</em></p>
-                </div>
-                <div class="card">
-                    <h3>P'tit Gourmand</h3>
-                    <p class="price">9,00€</p>
-                    <p class="desc">Mini Burger + Frites + Jus + Surprise</p>
-                </div>
-            </div>
+          <h2 class="section-title">🍟 Sides</h2>
+          <ul class="simple-list">
+            <li>
+              <span>Frites Maison</span>
+              <span class="price-tag">3,50€</span>
+            </li>
+            <li>
+              <span>Frites Cheddar & Bacon</span>
+              <span class="price-tag">5,00€</span>
+            </li>
+            <li>
+              <span>Coleslaw Frais</span>
+              <span class="price-tag">3,00€</span>
+            </li>
+          </ul>
         </section>
 
-        <hr class="divider">
-
-        <section class="menu-section" id="burgers">
-            <h2 class="section-title">🍔 Les Burgers</h2>
-            <p class="subtitle">Solo : 10,50€ | Option sans gluten +1€</p>
-            
-            <div class="menu-list">
-                <article class="menu-item">
-                    <div class="item-header">
-                        <h3>Le Classique</h3>
-                    </div>
-                    <p class="ingredients">Steak haché VBF, Cheddar 9 mois, Oignons confits, Laitue, Sauce secret.</p>
-                </article>
-
-                <article class="menu-item">
-                    <div class="item-header">
-                        <h3>Le Cocorico <span class="badge">Poulet</span></h3>
-                    </div>
-                    <p class="ingredients">Filet pané cornflakes, Tomates séchées, Parmesan, Roquette, Sauce Miel-Moutarde.</p>
-                </article>
-
-                <article class="menu-item">
-                    <div class="item-header">
-                        <h3>Le Montagnard <span class="badge hot">Best-seller</span></h3>
-                    </div>
-                    <p class="ingredients">Steak haché, Raclette de Savoie, Poitrine fumée, Oignons frits, Sauce BBQ.</p>
-                </article>
-
-                <article class="menu-item">
-                    <div class="item-header">
-                        <h3>Le Végé-Patch <span class="badge vege">Végé 🌱</span></h3>
-                    </div>
-                    <p class="ingredients">Galette légumes & quinoa, Chèvre frais, Pousses d'épinards, Sauce yaourt menthe.</p>
-                </article>
-            </div>
+        <section class="menu-section">
+          <h2 class="section-title">🍪 Desserts</h2>
+          <ul class="simple-list">
+            <li>
+              <span>Le Brookie</span>
+              <span class="price-tag">3,50€</span>
+            </li>
+            <li>
+              <span>Muffin Myrtilles</span>
+              <span class="price-tag">3,00€</span>
+            </li>
+            <li>
+              <span>Cookie Chocolat</span>
+              <span class="price-tag">2,50€</span>
+            </li>
+          </ul>
         </section>
-
-        <hr class="divider">
-
-        <div class="columns-grid" id="sides">
-            <section class="menu-section">
-                <h2 class="section-title">🍟 Sides</h2>
-                <ul class="simple-list">
-                    <li>
-                        <span>Frites Maison</span>
-                        <span class="price-tag">3,50€</span>
-                    </li>
-                    <li>
-                        <span>Frites Cheddar & Bacon</span>
-                        <span class="price-tag">5,00€</span>
-                    </li>
-                    <li>
-                        <span>Coleslaw Frais</span>
-                        <span class="price-tag">3,00€</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="menu-section">
-                <h2 class="section-title">🍪 Desserts</h2>
-                <ul class="simple-list">
-                    <li>
-                        <span>Le Brookie</span>
-                        <span class="price-tag">3,50€</span>
-                    </li>
-                    <li>
-                        <span>Muffin Myrtilles</span>
-                        <span class="price-tag">3,00€</span>
-                    </li>
-                    <li>
-                        <span>Cookie Chocolat</span>
-                        <span class="price-tag">2,50€</span>
-                    </li>
-                </ul>
-            </section>
-        </div>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-content">
-            <h3>📍 Où nous trouver ?</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Lun-Mar : Zone Nord (11h-14h)</p>
-            <p><i class="fas fa-map-marker-alt"></i> Jeu-Ven : Place Mairie (18h-22h)</p>
-            <div class="socials">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-            </div>
-            <p class="copyright">© 2024 Street Fusion/p>
+    <footer class="site_footer">
+      <div class="footer_top">
+        <div class="footer_contact">
+          <h3>Contact</h3>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <path
+                fill="currentColor"
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"
+              />
+            </svg>
+            06 12 34 56 78
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <path
+                fill="currentColor"
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"
+              />
+            </svg>
+            contact@streetfusion.fr
+          </p>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                />
+                <circle cx="12" cy="10" r="3" />
+              </g>
+            </svg>
+            Paris et Île-de-France
+          </p>
         </div>
-    </footer>
 
-</body>
+        <div class="footer_social">
+          <h3>Suivez-nous</h3>
+          <div class="social_icons">
+            <span class="svg_placeholder"
+              ><a
+                href="https://www.facebook.com/people/Sarah-Martinez/pfbid034tyt5qD33n9fbnRpSaRgrDVKNKnC7t76SpcC3a5ZKPXPrPtQEUkm7pUWLQWssvvKl/?rdid=WODN3MdiCLKZvADX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19DavMaN5m%2F"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  height="1em"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+                  /></svg></a
+            ></span>
+            <span class="svg_placeholder"
+              ><a
+                href="https://www.instagram.com/street_fusion28/?igsh=MWpsYWQ3bzNrb2ZtZA%3D%3D#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  height="1em"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 12a4 4 0 1 0-1.172 2.829A3.84 3.84 0 0 0 16 12.06l-.001-.063zm2.16 0a6.135 6.135 0 1 1-1.797-4.359a5.92 5.92 0 0 1 1.798 4.256l-.001.109zm1.687-6.406v.002a1.44 1.44 0 1 1-.422-1.018c.256.251.415.601.415.988v.029v-.001zm-7.84-3.44l-1.195-.008q-1.086-.008-1.649 0t-1.508.047c-.585.02-1.14.078-1.683.17l.073-.01c-.425.07-.802.17-1.163.303l.043-.014a4.12 4.12 0 0 0-2.272 2.254l-.01.027a6 6 0 0 0-.284 1.083l-.005.037a12 12 0 0 0-.159 1.589l-.001.021q-.039.946-.047 1.508t0 1.649t.008 1.195t-.008 1.195t0 1.649t.047 1.508c.02.585.078 1.14.17 1.683l-.01-.073c.07.425.17.802.303 1.163l-.014-.043a4.12 4.12 0 0 0 2.254 2.272l.027.01c.318.119.695.219 1.083.284l.037.005c.469.082 1.024.14 1.588.159l.021.001q.946.039 1.508.047t1.649 0l1.188-.024l1.195.008q1.086.008 1.649 0t1.508-.047c.585-.02 1.14-.078 1.683-.17l-.073.01c.425-.07.802-.17 1.163-.303l-.043.014a4.12 4.12 0 0 0 2.272-2.254l.01-.027c.119-.318.219-.695.284-1.083l.005-.037c.082-.469.14-1.024.159-1.588l.001-.021q.039-.946.047-1.508t0-1.649t-.008-1.195t.008-1.195t0-1.649t-.047-1.508c-.02-.585-.078-1.14-.17-1.683l.01.073a6.3 6.3 0 0 0-.303-1.163l.014.043a4.12 4.12 0 0 0-2.254-2.272l-.027-.01a6 6 0 0 0-1.083-.284l-.037-.005a12 12 0 0 0-1.588-.159l-.021-.001q-.946-.039-1.508-.047t-1.649 0zM24 12q0 3.578-.08 4.953a6.64 6.64 0 0 1-6.985 6.968l.016.001q-1.375.08-4.953.08t-4.953-.08a6.64 6.64 0 0 1-6.968-6.985l-.001.016q-.08-1.375-.08-4.953t.08-4.953A6.64 6.64 0 0 1 7.061.079L7.045.078q1.375-.08 4.953-.08t4.953.08a6.64 6.64 0 0 1 6.968 6.985l.001-.016Q24 8.421 24 12"
+                  /></svg></a
+            ></span>
+          </div>
+        </div>
+
+        <div class="footer_hours">
+          <h3>Horaires</h3>
+          <p>Lundi - Vendredi</p>
+          <p>11h30 - 14h30 | 18h00 - 22h00</p>
+          <p>Samedi</p>
+          <p>12h00 - 23h00</p>
+        </div>
+      </div>
+
+      <div class="footer_separator"></div>
+
+      <div class="footer_bottom">
+        <div class="footer_copyright">
+          <p>© 2025 Street Fusion. Tous droits réservés.</p>
+        </div>
+
+        <div class="footer_legal">
+          <p>Mentions légales</p>
+          <p>Politique de confidentialité</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
