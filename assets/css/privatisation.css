@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #FF7A00;   /* 🧡 Orange épicé */
+    --bg-dark: #1A1A1A;         /* ⚫ Noir charbon */
+    --bg-light: #272d2f;        /* Noir légèrement plus clair pour les blocs */
+    --text-white: #FFFFFF;      /* 🤍 Blanc pur */
+    --text-gray: #BFBFBF;       /* 🧂 Gris acier */
+    --accent-red: #E63946;      /* 🌶️ Rouge paprika pour les mises en avant */
+
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- En-tête & Titres --- */
+.header {
+    background: #0d0d0d;
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.logo { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-color); }
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+p{
+    color: var(--text-white);
+}
+
+/* --- Hero Section --- */
+.hero-event {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: 1px solid #333;
+}
+.headline { font-size: 3rem; color: var(--primary-color); }
+.subheadline { font-size: 1.3rem; color: var(--text-gray); margin-bottom: 30px; }
+
+.btn-cta, .btn-submit {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-white);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.btn-cta:hover, .btn-submit:hover {
+    background: #ff9133;
+    transform: translateY(-2px);
+}
+
+/* --- Sections Générales --- */
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 40px 0 30px;
+}
+.section-title i { margin-right: 10px; color: var(--text-gray); }
+
+/* --- Formules Grid --- */
+.formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.formula-card {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+.formula-card h3 { color: var(--primary-color); margin-top: 0; }
+.highlight-text { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: var(--accent-red); 
+    margin: 10px 0;
+}
+
+/* --- Tarification --- */
+.section-tarifs {
+    padding: 20px 0;
+}
+.tarifs-intro {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+.price-details {
+    display: flex;
+    justify-content: space-around;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.price-item {
+    text-align: center;
+}
+.price-label { color: var(--text-gray); font-size: 0.9rem; }
+.price-value { 
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+.note-quote {
+    background: var(--bg-dark);
+    border-left: 4px solid var(--primary-color);
+    padding: 10px 20px;
+    color: var(--text-gray);
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* --- Formulaire --- */
+.contact-form {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-group.half-width {
+    flex: 1 1 calc(50% - 10px); /* Pour les champs côte à côte */
+    min-width: 250px;
+}
+.form-group.full-width {
+    width: 100%;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+input[type="number"], 
+select, 
+textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+textarea { resize: vertical; }
+
+/* Styles spécifiques pour le champ date/select sur fond sombre */
+input[type="date"], select {
+    appearance: none; /* Cache le style natif (pour select) */
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+.footer p { margin: 5px 0; }
+
+/* --- Responsive mobile --- */
+@media (max-width: 600px) {
+    .headline { font-size: 2.2rem; }
+    .subheadline { font-size: 1.1rem; }
+    
+    .price-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .form-group.half-width {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 40px 0 30px;
+    /* NOUVEAU : Ajout de la transition */
+    transition: letter-spacing 0.3s ease;
+}
+
+.section-title:hover {
+    letter-spacing: 2px; /* L'espacement des lettres augmente légèrement */
+    cursor: default; /* Garde le curseur par défaut, car ce n'est pas un lien */
+}
+
+/* Localisez la règle .formula-card (vers la ligne 96) */
+.formula-card {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+    /* NOUVEAU : On ajoute les transitions et l'ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* NOUVELLE RÈGLE : Au survol, la carte se soulève légèrement */
+.formula-card:hover {
+    transform: translateY(-5px); /* Se soulève */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Ombre plus marquée */
+}
