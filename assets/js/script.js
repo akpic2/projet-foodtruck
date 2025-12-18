@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* Animation apparition img histoire du haut */
 const foodtruckImg = document.querySelector('.acceuil_foodtruck');
 const histoireSection = document.querySelector('.acceuil_histoire_img');
 
@@ -81,5 +82,20 @@ window.addEventListener('scroll', () => {
         foodtruckImg.classList.add('visible');
     } else {
         foodtruckImg.classList.remove('visible');
+    }
+});
+
+// Animation apparition texte histoire depuis la droite
+const histoireTexte = document.querySelector('.acceuil_histoire_texte');
+const histoireTextSection = document.querySelector('section');
+
+window.addEventListener('scroll', () => {
+    const sectionRect = histoireTextSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (sectionRect.top < windowHeight * 0.8 && sectionRect.bottom > 0) {
+        histoireTexte.classList.add('visible');
+    } else {
+        histoireTexte.classList.remove('visible');
     }
 });

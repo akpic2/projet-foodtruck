@@ -1,344 +1,390 @@
 :root {
-  --primary-color: #ff8c00; /* Orange Vif pour l'Accentuation */
-  --secondary-color: #ff8c00; /* Utiliser la même couleur pour un look uniforme */
-  --bg-dark: #272d2f; /* Fond principal (Couleur demandée) */
-  --bg-light: #33393b; /* Arrière-plan des cartes/blocs */
-  --text-dark: #ffffff; /* Texte Principal (Blanc pour le contraste) */
-  --text-light: #ffffff; /* Pour les zones claires (maintenant blanc) */
-  --text-gray: #b3b3b3; /* Texte Secondaire/Ingrédients */
-  --font-heading: "Oswald", sans-serif;
-  --font-body: "Bangers", cursive;
+	--primary-color: #ff8c00;
+	--secondary-color: #ff8c00;
+	--bg-dark: #272d2f;
+	--bg-light: #33393b;
+	--text-dark: #ffffff;
+	--text-light: #ffffff;
+	--text-gray: #b3b3b3;
+	--font-heading: "Oswald", sans-serif;
+	--font-body: "Bangers", cursive;
 }
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html{
-    height: 100%;
-    font-size: 24px;
-    font-family: 'Bangers', cursive;
+html {
+	height: 100%;
+	font-size: 24px;
+	font-family: 'Bangers', cursive;
 }
 
 body {
-    background-color: var(--charcoal);
-    color: var(--white);
-    line-height: 1.6;
-    height: 100%;
-    font-size: 24px;
-    font-family: "Bangers", cursive;
-  }
+	background-color: var(--charcoal);
+	color: var(--white);
+	line-height: 1.6;
+	height: 100%;
+	font-size: 24px;
+	font-family: "Bangers", cursive;
+}
 
-
-/* --- Typographie --- */
+/* ======================= TYPOGRAPHIE ======================= */
 h1,
 h2,
 h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
-/* --- Header & Navigation --- */
-
-/* ======================= HEADER ======================= */
+/* ======================= HEADER & NAVIGATION ======================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 130px;
-  background-color: transparent;
-  z-index: 50;
-  transition: background-color 0.22s ease, box-shadow 0.22s ease;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 130px;
+	background-color: transparent;
+	z-index: 50;
+	transition: background-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 header.scrolled {
-  background-color: var(--charcoal);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	background-color: var(--charcoal);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .acceui_logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
 }
 
 .acceui_logo img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+	max-width: 200px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
 }
 
 .acceuil_nav1,
 .acceuil_nav2 {
-  display: flex;
-  flex: 1;
+	display: flex;
+	flex: 1;
 }
 
 .acceuil_nav1 {
-  justify-content: flex-start;
-  padding-left: 80px;
+	justify-content: flex-start;
+	padding-left: 80px;
 }
 
 .acceuil_nav2 {
-  justify-content: flex-end;
-  padding-right: 80px;
+	justify-content: flex-end;
+	padding-right: 80px;
 }
 
 .acceuil_nav1 ul,
 .acceuil_nav2 ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .acceuil_nav1 ul {
-  gap: 220px;
+	gap: 220px;
 }
+
 .acceuil_nav2 ul {
-  gap: 100px;
+	gap: 100px;
 }
 
 .acceuil_nav1 a,
 .acceuil_nav2 a {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 3px;
+	text-decoration: none;
+	color: var(--white);
+	font-weight: 700;
+	font-size: 28px;
+	letter-spacing: 3px;
+	transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
 }
 
 .acceuil_nav1 a.active,
 .acceuil_nav1 a:hover,
 .acceuil_nav2 a:hover {
-  color: var(--orange-spicy);
+	color: var(--orange-spicy);
 }
 
-/* Hover sur les liens de navigation */
-.acceuil_nav1 a,
-.acceuil_nav2 a {
-  transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+.acceuil_nav1 a:hover {
+	transform: translateY(-2px);
+	text-shadow: 0 3px 8px rgba(255, 107, 53, 0.4);
 }
 
-.acceuil_cta{
-  background-color: var(--primary-color);
-  width: 200px;
-  position: relative;
-  left: 250px;  
-  top: 200px;
-  border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+/* ======================= CTA ======================= */
+.acceuil_cta {
+	background-color: var(--primary-color);
+	width: 200px;
+	position: relative;
+	left: 250px;
+	top: 200px;
+	border-radius: 25px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .acceuil_cta:hover {
-    transform: scale(1.08);
-    box-shadow: 0 12px 30px rgba(255,107,53,0.5);
-    filter: brightness(1.1);
+	transform: scale(1.08);
+	box-shadow: 0 12px 30px rgba(255,107,53,0.5);
+	filter: brightness(1.1);
 }
 
 .acceuil_cta:hover a {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-}
-.acceuil_nav1 a:hover {
-  transform: translateY(-2px);
-  text-shadow: 0 3px 8px rgba(255, 107, 53, 0.4);
+	transform: scale(1.05);
+	transition: transform 0.2s ease;
 }
 
-/* --- Hero Section (Image de fond) --- */
-/* Styles pour la section Hero */
+/* ======================= HERO SECTION ======================= */
 .hero {
-  /* 1. Définir l'image de fond et son chemin */
-  background-image: url("../img/burger-menu.png");
-  background-attachment: fixed;
-
-  /* 2. Assurer que l'image couvre toute la zone sans répétition */
-  background-size: cover; /* Important : Garantit que l'image couvre toute la section */
-  background-repeat: no-repeat;
-
-  /* 3. Centrer l'image */
-  background-position: center center;
-
-  /* 4. Donner une hauteur minimale à la section pour que l'image soit visible */
-  min-height: 700px; /* Ajustez cette valeur selon la hauteur désirée (ex: 50vh ou 600px) */
-
-  /* Alignement du contenu (le texte) */
-  display: flex;
-  justify-content: center; /* Centre horizontalement le contenu */
-  align-items: center; /* Centre verticalement le contenu */
-  text-align: center;
-  padding: 20px; /* Pour ajouter un peu d'espace autour */
+	background-image: url("../img/burger-menu.png");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
 }
 
-/* Styles pour le contenu texte (facultatif mais recommandé pour la lisibilité) */
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Ajout d'un fond semi-transparent noir */
-  padding: 30px;
-  border-radius: 30px;
-  color: white; /* Pour s'assurer que le texte est lisible sur l'image sombre */
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	border-radius: 30px;
+	color: white;
 }
 
 .hero-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+	font-size: 2.5em;
+	margin-bottom: 10px;
 }
 
 .hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+	font-size: 1.2em;
+	margin-bottom: 20px;
 }
 
-/* --- Container & Sections --- */
+/* ======================= CONTAINER & SECTIONS ======================= */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px 20px;
 }
 
 .section-title {
-  color: var(--orange-spicy);
-  border-bottom: 2px solid var(--orange-spicy);
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 2rem;
+	color: var(--orange-spicy);
+	border-bottom: 2px solid var(--orange-spicy);
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 2rem;
 }
 
 .subtitle {
-  color: var(--text-gray);
-  margin-bottom: 30px;
-  font-style: italic;
-  font-size: 45px;
-}
-.divider {
-  border: 0;
-  height: 1px;
-  background: #444;
-  margin: 50px 0;
+	color: var(--text-gray);
+	margin-bottom: 30px;
+	font-style: italic;
+	font-size: 45px;
 }
 
-/* --- Cartes Formules --- */
+.divider {
+	border: 0;
+	height: 1px;
+	background: #444;
+	margin: 50px 0;
+}
+
+/* ======================= CARTES FORMULES ======================= */
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
 }
 
 .card {
-  background: var(--charcoal);
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #444;
-  text-align: center;
-  color: var(--white);
+	background: var(--charcoal);
+	padding: 25px;
+	border-radius: 10px;
+	border: 1px solid #444;
+	text-align: center;
+	color: var(--white);
 }
 
 .card .price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--orange-spicy);
-  margin: 10px 0;
-}
-.card .desc {
-  font-size: 0.9rem;
-  color: var(--steel-gray);
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--orange-spicy);
+	margin: 10px 0;
 }
 
-/* --- Liste Burgers --- */
+.card .desc {
+	font-size: 0.9rem;
+	color: var(--steel-gray);
+}
+
+/* ======================= MENU ITEMS ======================= */
 .menu-list {
-  display: grid;
-  gap: 20px;
+	display: grid;
+	gap: 20px;
 }
 
 .menu-item {
-  background: #555;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 5px solid var(--orange-spicy);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	background: #555;
+	padding: 20px;
+	border-radius: 8px;
+	border-left: 5px solid var(--orange-spicy);
+}
+
+.item-text {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	flex: 1;
 }
 
 .item-header h3 {
-  font-size: 1.4rem;
-  margin-bottom: 5px;
+	font-size: 1.4rem;
+	color: var(--text-dark);
+	text-align: left;
 }
+
 .ingredients {
-  color: var(--text-gray);
-  font-size: 0.95rem;
+	color: var(--text-gray);
+	font-size: 0.95rem;
+	text-align: left;
 }
 
-/* Badges */
-.badge {
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  vertical-align: middle;
-  font-family: var(--font-body);
-  font-weight: bold;
-  margin-left: 10px;
-  color: var(--text-light);
+.item-price {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: var(--primary-color);
 }
+
+.item-image {
+	flex-shrink: 0;
+	width: 120px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease;
+}
+
+.item-image img {
+	width: 140px;
+	height: auto;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.menu-item:hover .item-image img {
+	transform: scale(1.3);
+}
+
+/* ======================= BADGES ======================= */
+.badge {
+	font-size: 0.7rem;
+	padding: 3px 8px;
+	border-radius: 4px;
+	vertical-align: middle;
+	font-family: var(--font-body);
+	font-weight: bold;
+	margin-left: 10px;
+	color: var(--text-light);
+	background-color: #555;
+}
+
 .badge.vege {
-  background-color: #4caf50;
-}
-.badge.hot {
-  background-color: #e63946;
-}
-.badge {
-  background-color: #555;
+	background-color: #4caf50;
 }
 
-/* --- Sides & Desserts (Colonnes) --- */
+.badge.hot {
+	background-color: #e63946;
+}
+
+/* ======================= SIDES & DESSERTS ======================= */
 .columns-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px;
 }
 
 .simple-list {
-  list-style: none;
+	list-style: none;
 }
+
 .simple-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px dashed #444;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+	border-bottom: 1px dashed #444;
 }
+
 .price-tag {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-family: var(--font-heading);
+	color: var(--primary-color);
+	font-weight: bold;
+	font-family: var(--font-heading);
 }
 
-/* --- Responsive Mobile --- */
+.side-image {
+	width: 80px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: 75px;
+	display: flex;
+	justify-content: center;
+}
+
+.side-image img {
+	width: 100%;
+	height: auto;
+	transform: scale(1.8);
+}
+
+/* ======================= RESPONSIVE ======================= */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .header {
-    flex-direction: column;
-  }
-  .header nav {
-    margin-top: 10px;
-  }
-}
-
-.item-header h3 {
-  color: var(--text-dark);
+	.hero h1 {
+		font-size: 2.2rem;
+	}
+	.header {
+		flex-direction: column;
+	}
+	.header nav {
+		margin-top: 10px;
+	}
 }
